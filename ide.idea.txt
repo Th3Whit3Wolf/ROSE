@@ -1,0 +1,220 @@
+~~~~~ Rust Optimized Super Editor (ROSE) {Like Doctor Who} ~~~~~
+
+---------------------------------------------------------------------------------------
+Prime Directive: Be the Fastest and Most Beautiful Integrated Development Environment |
+---------------------------------------------------------------------------------------
+
+
+Feature
+-------	Logic
+
+1.  VIM Mode					
+	- Fastest Way Too Type & Reduces Typing Injuries
+2.  Org Mode					
+	- Super Useful for make documents and taking notes
+3.  Server-Client Model
+	- Instant Load Time, Fastest Opening Editor
+4.  Load Large File as Multiple Chunks or Async
+	- Makes Working With Large Files Easier, Better Experience, Makes This the Fastest Editor (Stole Idea from Emacs Plugin)
+5.  Fast Editing
+	- Use Xi or it's Rope Science
+6.  Beautiful & Responsive
+	- Use Vulkano or RSLS to utilize the GPU to Quickly redraw UI Elements, making it fast and responsive
+7.  Use File Icons like Atom Plugin File Icons
+	- Eye Candy, back to making a beautiful Editor
+8. 	Integrate Servo
+	- New Programmers or Programmer Learning a New Language Can View Functions or Guides Without Leaving the Editor & to Preview Webpages
+9. 	Move Through Browser With J,K,L,I,<TAB> 
+	- Allow User To Use Browser Without Touching Their Mouse
+10. Utilize Language Server Where Available For Linting
+	- Needs To Be On Par With All Editors With Linting
+11. Utilize Best Available Linters For Languages That Don't Have A Language Server
+	- Maximum Support For Everyone 
+12. Builtin AutoComplete 
+	- Maximum Functionality
+13.	Utilize Syntax Highlighting
+	- Makes The Display Pretty & More Useful
+13.	Customizeable
+	- Allow Custom VIM Mode To Be Customized Like Vim
+	- Allow Visual Customization (i.e. Themes, Syntax, Status Bar, Tabs)
+15. Make All Linters & Autocompletion Tools Paint Updates To The Display @ Least @ 60 FPS
+	- Allows For A More Responsive & Smooth Experience
+	- Utilize GPU
+16. Get Advice For Default KeyBindings
+	- Getting Vimrc Files From People With Decades Of Experience With Programming Useing Vim May Grant A Better Default User Experience
+17. Use Json For Plugins
+	-
+18. Look Into How Eclipse & NetBeans Work
+	- Make Java & Languages That Use JVM Easier To Work On
+19. Able To Format Code On Save
+	- Make Code Beautiful (ex. Gofmt Rustfmt)
+20. Able To Find Quickly
+	- Utilize Repgrip (or whatever is fastest for the usecase)
+21. Need Good File Explorer
+22. Able To Compile All Compiled Languages Without Leaving Editor
+	- Call To Compiler (ex GCC, Clang, Rustc, Javac, Cargo)
+23. Inteligently Compile Rust
+	- For non main.rs Source Code Use RustC
+	- Otherwise Use Cargo
+24. Builtin Terminal
+	- Allows For Program Testing & Information Gathering Without Leaving The Terminal
+25. Multipane
+26. Minimap
+	- Shows where you are in file
+	- Highlights Searched Text
+27. Git Push Pull and(if possible) easily make edits to personal profile( add new repos, edit current, view markdown)
+	- Increased functionality
+28. Code minifier Code for CSS, HTML, JavaScript, JSON, SVG
+29. Use Tokei to get file information
+	- Not Super Useful but neat and gets info super fast ( Search All of Firefox Program in 8 seconds)
+	- Has Support for over 100 languages and their various extensions
+	- Displays How many Languages program uses
+	- Displays How many Lines a program has
+	- Displays How many of those lines contain code
+	- Displays How many of those lines contain comments
+	- Displays How many of those lines are blank
+30. Utilize the best debugger for every program
+	- Increased Functionality 
+	- This Should be higher in the list
+31. Needs Ligatures Support
+	- This Makes Code More Aesthetically Pleasing and Easier to Read
+-------
+Maybes|
+-------
+
+A. Test Program Macros
+	a. Allow to test program without needing a terminal pane
+B. Terminal Location
+	a. In any pane
+	b. Under File Explorer
+C. Look at Popular Plugin for major IDEs
+	a. Awesome Emacs (https://github.com/emacs-tw/awesome-emacs#interface-enhancement) (for sure https://github.com/TeMPOraL/nyan-mode)
+	b. Vim Aweseom (https://vimawesome.com/)
+	c. Atom (https://vimawesome.com/) (for sure pigments)
+	d. VsCode(https://github.com/viatsko/awesome-vscode#rust) (rainbow Brackets/ parenthesis)
+	e. Sublime (https://github.com/JaredCubilla/sublime)
+D. A Method to check email, Social Networks, LinkedIn(type of social networks), Github, Instant Messagers
+	a. Maybe Notifications ability
+	b. Stack Overflow and Reddit belong on this list
+	c. This allows the user to either check personal/deemable important information & get programming information without leaving the IDE so they can get back to work faster
+	d. Needs to be fast.
+	e. Launch private(incognito) session or design web apllication that doesn't load trackers(maybe javascript aswell?) and utilize some sort of cache
+E. Method for finding currently used media source(Spotify,Foobar,etc) and display the artist and song in status bar.
+	a. Some may like this feature. Shouldn't be too dificult to implement and isn't speed critical
+F. Youtube plugin
+	a. Would be useful for watching conferences, talks, or guides
+	b. Should have a run in background option
+G. Potentially run VIM Mode by Default and Have a "Training Wheels Mode" for nonvim users
+H. Edit Tokei so it can display other information like:
+	a. Brackets
+	b. Parenthesis
+	c. Braces
+	d. Char
+	e. Word Count
+	f. Symbols
+	g. Numbers
+
+------
+Goals|
+------
+
+- Be The Best Editor (for code) On Desktop
+- Uncomprimising Performance
+	# Ability To Handle Very Large Documents
+	# Minimal end-to-end latency
+	# Smooth scrolling
+- Extensible
+- Handle Rich Text
+
+-------
+Themes|
+-------
+
+- Loosely coupled Modules
+	# Seperation between front-end & Core
+	# Plugins for syntax highlighting etc (
+- Polygot
+	# Core is in Rust, MacOS front-end in Swift, GTK linux
+	# Bring your own language for plugins (rpc not scritping or dll)
+- Fully Embrace Async
+- Send Small Deltas
+	# Connections are stateful
+- Use Sophisticated Data Structures & Algorithms
+	# "Rope Science" series
+	# CRDT(Conflict-free Replicated Data Type) for merging async modifications
+
+-----------------
+Getting to 60fps|
+-----------------
+How to?
+	- Use Layers
+	- Adopt Skia (9MB Dependency)
+	- Adopt WebRender (3MB Dependency)
+	- Do Rendering in fast software (Maybe SIMD, Maybe Multicore)
+	- Roll Own
+
+Layers Vs Gamelike
+	
+	Layers Are Seductive
+		- Smooth Scrolling (at least at slow speeds)
+		- Lowest Power Cursor Blink
+		- Works Around Slow Rendering
+		- Can Hook Directly To Touch Input Thread
+	But They Have a Dark Side
+		- Increased GPU Memory Bandwidth
+		- Get In The Way When Most Of The Screen Needs Re-Rendering
+		- Underruns When Aoo Can't Keep Up With Touch Thread
+	Challenge In Gamelike
+		- Actual games spend ~16ms rendering the scene
+		- For typing, want to render small rect and commit to display quickly
+		- Some platforms support incremental present (Android, Windows)
+		- Mac doesn't, but can fake by overlaying a small layer (Chrome)
+	Compositor adds 1.5 frames of latency
+		- Future get compositor out of the way
+			# fullscreen today, h/w overlay tomorrow
+Async Lessons
+	Atomic
+		- Commits flow down the pipeline
+		- Commit must be "large enough," ie scrollbar and the contents in same commit
+	Eventually Consistent
+		- Can tolerate slowness
+		- Artifacts may be visible
+			# Only do this when a component is ACTUALLY SLOW
+	Wrong
+		- The default
+	// Mixing Sync & Async is Painfull
+What is async bad at?
+	- Measuring text (needed for word wrapping)
+		# Build async pipeline with batched request?
+			(=) Preserves loose coupling but is complicated
+			(=) Resizing window is worst-cadse (small delta assumption violated)
+		# Move to in-process coupling between front-end and core, and have call through ABI?
+	- Handling modal commands
+		# Mode affects whether keystroke is sent to IME or interpreted as command
+		# Another instance of sync/async impedance mismatch
+			(=) want to decide this inside keyDown() method
+		# What is the RTT for the RPC? Maybe can tolerate
+			(=) resistance from the community
+		# Many possible (complicated) workarounds, eg uploading fragment of state machine to FE
+Async Working Well: Syntax Highlighting
+	- Syntax highlighting is slow (regex-based)
+		# Thus is good candidate for "eventually consistent"
+		# Inserted char appears instantly (but possibly in wrong style)
+			(=) plan to delay commit w/ timeout, so atomic if plugin is fast (~1-2ms)
+	- Sometimes propagates small delta, aometimes not
+		# Example: insert /* at begiinning of large document
+	- Ripple through large document happens in background, doesn't block UI
+	- Core stores style info for entire document: instant scrolling
+	- Fancy cache so RAM use by syntax plugin is capped
+
+
+
+
+
+For Reference:
+
+Xi: and editor for thhe next 20 years - Raph Levien
+https://www.youtube.com/watch?v=4FbQre9VQLI
+
+RustConf2016 - A Modern Editor Built in Rust by Ralp Levien
+https://www.youtube.com/watch?v=SKtQgFBRUvQ
